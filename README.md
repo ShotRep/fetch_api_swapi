@@ -5,7 +5,7 @@
 <!-- GETTING STARTED -->
 ## Getting Started
 Using the Star Wars API to make requests and learn fetch & axios. 
-</br>
+
 [SWAPI - The Star Wars API - URL](https://swapi.dev/)
 
 All the Star Wars data you've ever wanted:
