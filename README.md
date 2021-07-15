@@ -8,6 +8,8 @@ Using the Star Wars API to make requests and learn fetch & axios.
 
 [AXIOS Library - URL](https://axios-http.com/)
 
+[AXIOS GitHub - URL](https://github.com/axios/axios)
+
 [SWAPI - The Star Wars API - URL](https://swapi.dev/)
 
 All the Star Wars data you've ever wanted:
