@@ -11,7 +11,7 @@ fetch("https://swapi.dev/api/planets/")
     return fetch(filmURL)
   })
   .then((response) => {
-    if (!response.ok) throw new Error(`Status Code Error: &{response.status}`)
+    if (!response.ok) throw new Error(`Status Code Error: ${response.status}`)
     return response.json()
   })
   .then((data) => {
@@ -22,3 +22,8 @@ fetch("https://swapi.dev/api/planets/")
     console.log("Fetch did not complete!")
     console.log(err)
   })
+
+/*AXIOS LIBRARY - A library for making HTTP requests.*/
+/*From here on out int he course we will be using AXIOS not Fetch */
+/*AXIOS simplifies the process of making requests*/
+/*AXIOS is using Fetch behind the scenes*/
