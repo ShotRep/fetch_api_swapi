@@ -90,26 +90,44 @@
 //   })
 
 //above refactored
-const fetchNextPlanets = (url = "https://swapi.dev/api/planets") => {
-  console.log(url)
-  return axios.get(url)
-}
-const printPlanets = ({data}) => {
-  console.log(data)
-  for (let planet of data.results) {
-    console.log(planet.name)
-  }
-  return Promise.resolve(data.next)
-}
+// const fetchNextPlanets = (url = "https://swapi.dev/api/planets") => {
+//   console.log(url)
+//   return axios.get(url)
+// }
+// const printPlanets = ({data}) => {
+//   console.log(data)
+//   for (let planet of data.results) {
+//     console.log(planet.name)
+//   }
+//   return Promise.resolve(data.next)
+// }
 
-fetchNextPlanets()
-  .then(printPlanets)
-  .then(fetchNextPlanets)
-  .then(printPlanets)
-  .then(fetchNextPlanets)
-  .then(printPlanets)
-  .then(fetchNextPlanets)
-  .then(printPlanets)
-  .catch((err) => {
-    console.log("Error!", err)
-  })
+// fetchNextPlanets()
+//   .then(printPlanets)
+//   .then(fetchNextPlanets)
+//   .then(printPlanets)
+//   .then(fetchNextPlanets)
+//   .then(printPlanets)
+//   .then(fetchNextPlanets)
+//   .then(printPlanets)
+//   .catch((err) => {
+//     console.log("Error!", err)
+//   })
+
+//practice grabbing things from the api and why we destructure to data. data houses everything we are trying to get at so destructuring allows us to start there.
+axios.get('https://swapi.dev/api/planets')
+  .then((response) => {
+    console.log(response)
+    console.log(response.data)
+    console.log(response.data.next)
+    console.log(response.data.results)
+    console.log(response.data.results[0])
+    console.log(response.data.results[0].name)
+    console.log(response.data.results[0].rotation_period)
+    console.log(response.data.results[0].orbital_period)
+    console.log(response.data.results[0].diameter)
+    console.log(response.data.results[0].climate)
+    for (let planets of response.data.results) {
+      console.log(planets.name)
+    }
+})
